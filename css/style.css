@@ -2,6 +2,27 @@ body {
     text-align: center;
     background-color: black;
 }
+.menu{
+    position: fixed;
+}
+.menu button{
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    border: white solid 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.menu-options button{
+    color: black;
+    background-color: ghostwhite;
+    font-size: medium;
+    border-radius: 2px;
+    border: gray  solid 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-top: 5px;
+}
 .options{
     color: white;
     background-color: black;
@@ -24,14 +45,7 @@ time {
 #reloj{
     background-color: black;
 }
-button{
-    color: white;
-    background-color: black;
-    border-radius: 2px;
-    border: white solid 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-}
+
 button:hover{
     color: white;
     background-color: black;
