@@ -10,30 +10,15 @@
 </head>
 
 <body>
-    <div class="menu">
-    <button id="watch" class="options">Reloj</button>
-    <button id="chrono" class="options">Cronometro</button><br>
-    <button id="alarm" class="options">Alarma</button>
-    <div id="tpick-h"></div>
-    <div id="tpick-m"></div>
-    <div id="tpick-s"></div>
-    <div class="menu-options">
-        <div>
-        <select id="tpick-h"></select>
-        <select id="tpick-m"></select>
-        <select id="tpick-s"></select>
-        </div>
-        <button id="tset">Set</button>
-        <button id="treset" disabled>Reset</button>
-      </div>    
+    <div id="menu">
+    <a href="Index.html"><button id="watch" class="options" >Reloj</button></a>
+    <a href="html/cronometer.html"><button id="chrono" class="options">Cronometro</button></a><br>
+    <button id="tempo" class="options">Temporizador</button>
     </div>
-    <time time>00:00:00.00</time><br>
-    <div class="menu-options">
-    <button id="play">Go!</button>
-    <button id="pause">Pause!</button>
-    <button id="restart">Restart!</button>
+    <time time>00:00:00</time>
+    <div>
     </div>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/clock.js"></script>
 </body>
 
 </html>
