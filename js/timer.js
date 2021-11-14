@@ -4,7 +4,7 @@ const pausetime = document.querySelector("#pause");
 const restarttime = document.querySelector("#restart");
 const newtime = document.querySelector('#new');
 const tempotime = document.querySelector("#tempo");
-
+let sound = document.getElementById('xyz');
 
 let hours = parseInt(`00`);
 let minutes = parseInt(`00`);
@@ -21,7 +21,9 @@ function timer() {
     //if (miliseconds < 10) miliseconds = '0' + miliseconds
 
     if(hours == 0 && minutes == 0 && seconds == 0 && miliseconds == 0){
+        sound.play();
         alert("El tiempo del temporizador ha acabado");
+        sound.pause();
         clearInterval(timeCall)
 
         hours = `00`
@@ -30,9 +32,9 @@ function timer() {
         miliseconds = '00'
 
         document.getElementById('new').style.visibility = "visible";
+
     }
-
-
+    
     if (miliseconds < 0) {
         miliseconds = 99;
         seconds--
@@ -76,6 +78,16 @@ pausetime.onclick = (event) => {
     clearInterval(timeCall)
     playtime.removeAttribute('disabled')
 }
+
+
+let divlist = document.createElement("div");
+let selectHour = document.createElement("select");
+let selectMin = document.createElement("select");
+let selectSec = document.createElement("select");
+let selectMili = document.createElement("select");
+let dospuntos = document.createElement("div")
+let textpuntos = document.createTextNode(":");
+dospuntos.appendChild(textpuntos);
 
 restarttime.onclick = (event) => {
     clearInterval(timeCall)
@@ -124,16 +136,6 @@ newtime.onclick = (event) => {
     divlist.appendChild(textpuntos.cloneNode());
     divlist.appendChild(selectMili);
 }
-
-let divlist = document.createElement("div");
-let selectHour = document.createElement("select");
-let selectMin = document.createElement("select");
-let selectSec = document.createElement("select");
-let selectMili = document.createElement("select");
-let dospuntos = document.createElement("div")
-let textpuntos = document.createTextNode(":");
-
-dospuntos.appendChild(textpuntos)
 
 selectHour.id = "hours";
 selectMin.id = "min";

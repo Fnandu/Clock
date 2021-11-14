@@ -44,3 +44,10 @@ button:hover{
     border: white solid 2px;
     box-shadow: 0 1px 10px 0 rgba(255,255,255),0 1px 20px 0 rgba(255,255,255);
 }
+
+option, select{
+    color:white;
+    background-color:black;
+    font: 125px monospace;
+    text-align: center;
+}

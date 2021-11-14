@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="menu">
+        <a href="../Index.html"><button id="watch" class="options">Reloj</button></a>
+        <a href="cronometer.html"><button id="chrono" class="options">Cronometro</button></a><br>
+        <a href="timer.html"><button id="tempo" class="options">Temporizador</button></a>
+        <a href="alarm.html"><button id="alarm" class="options">Alarm</button></a>
+    </div>
+    <h2 id='clock'></h2>
+    <div id='alarm-container'>
+        <h3>Set Alarm Time</h3>
+        <div>
+            <select id='alarmhrs'></select>
+
+            <select id='alarmmins'></select>
+
+            <select id='alarmsecs'></select>
+        </div>
+    </div>
+
+    <div id='buttonHolder'>
+        <div>
+            <button id='setButton'>Set Alarm</button>
+            <button id='clearButton'>Clear Alarm</button>
+        </div>
+    </div>
+    <audio id="xyz" src="../audio/alarm.wav" preload="auto"></audio>
+    <script type="text/javascript" src="../js/alarm.js"></script>
+</body>
+
+</html>
